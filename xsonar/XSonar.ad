@@ -1,0 +1,329 @@
+!
+!  Resource file for xsonar.c 
+!
+!
+!
+! Top-level window and defaults for children
+!
+xsonar*title:                                       Xsonar     
+!
+xsonar*MainButtonHolder.numColumns:                 3
+xsonar*MainButtonHolder.isAligned:                  True
+xsonar*MainButtonHolder.entryAlignment:             ALIGNMENT_CENTER
+xsonar*MainButtonHolder*background:                 GainsBoro
+xsonar*MainButtonHolder.spacing:                    0
+xsonar*MainButtonHolder*highlightThickness:         0
+xsonar*MainButtonHolder*shadowThickness:            2
+xsonar*MainButtonHolder*DemuxButton*marginWidth:    10
+xsonar*MainButtonHolder*DemuxButton*marginHeight:   10
+!
+xsonar*TitleFrame.shadowThickness:                  3
+xsonar*TitleFrame.background:                       black
+xsonar*TitleFrame.marginWidth:                      3
+xsonar*TitleFrame.marginHeight:                     3
+!
+xsonar*ButtonFrame.borderWidth:                     5
+xsonar*ButtonFrame.borderColor:                     Gainsboro
+xsonar*ButtonFrame.marginWidth:                     5
+xsonar*ButtonFrame.marginHeight:                    5
+xsonar*ButtonFrame.background:                      Gainsboro
+xsonar*ButtonFrame.shadowThickness:                 4
+!
+xsonar*topShadowColor:                              white
+xsonar*bottomShadowColor:                           gray22
+xsonar*highlightColor:                              IndianRed
+xsonar*highlightOnEnter:                            True
+xsonar*armColor:                                    IndianRed
+xsonar*background:                                  Gainsboro
+xsonar*foreground:                                  black
+xsonar*borderColor:                                 red
+xsonar*TitleWindow*background:                      black
+xsonar*FileMenuBar*marginWidth:                     3
+xsonar*FileMenuBar*marginHeight:                    3
+!
+!  Default fonts
+!
+xsonar*fontList:      -adobe-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*
+!       -adobe-courier-bold-r-Normal--*-120-*-*-*-*-ISO8859-1
+!       -adobe-itc lubalin graph-demi-r-normal-*-12-120-*-*-*-*-*-*
+!       -adobe-helvetica-bold-r-*-*-12-120-*-*-*-*-*-*
+!
+!     Window titles
+!
+xsonar*NavDialog.title:                       Navigation
+xsonar*OrientDialog.title:                    Sinuous Track Sonar
+xsonar*SetupDialog.title:                     Sonar Setup
+xsonar*DemuxSetupDialog.title:                Demux Setup
+xsonar*BeamDialog.title:                      Beam Angle Correction     
+xsonar*LinearDialog.title:                    Linear Stretch
+xsonar*HistDialog.title:                      Histogram Display
+xsonar*SlantDialog.title:                     Slant Range Correction
+xsonar*DestripeDialog.title:                  Destripe
+xsonar*DemuxDialog.title:                     Demultiplex Sonar
+xsonar*MessageDialog.title:                   Messages
+xsonar*CheckLonDialog.title:                  Central Longitude
+xsonar*FilterDialog*title:                    Filter Application 
+xsonar*ComboDialog*title:                     Image Functions
+xsonar*BoundsDialog*title:                    Raster Map
+xsonar*TduSetupDialog*title:                  Print Parameters
+xsonar*BeamSetupDialog*title:                 Beam Pattern Correction 
+!
+!     Main window button names
+!
+xsonar*ExitButton.labelString:                Exit
+xsonar*NavButton.labelString:                 Navigation
+xsonar*OrientButton.labelString:              Sonar Map
+xsonar*SetupButton.labelString:               Setup
+xsonar*DemuxButton.labelString:               Demux
+xsonar*MainButtonHolder.width:                500
+xsonar*HistButton.labelString:                Histogram
+xsonar*CombineButton.labelString:             Image
+xsonar*ConvertButton.labelString:             Convert
+xsonar*FilterButton.labelString:              Filters
+xsonar*MapButton.labelString:                 Coast Map
+#xsonar*NavButton*highlightColor:             IndianRed
+#xsonar*NavButton*highlightOnEnter:           True
+!
+! Main Window colors
+!
+xsonar*TitleWindow*background:                Black
+!
+! Buttons on orient display
+!
+xsonar*OrientDialog*CancelButton.labelString:          Cancel
+xsonar*OrientDialog*CancelButton.width:                50
+xsonar*OrientDialog*RunButton.labelString:             Run
+xsonar*OrientDialog*RunButton.width:                   50
+!
+! Buttons on hist display
+!
+xsonar*HistDialog*HistClose.labelString:               Close
+xsonar*HistDialog*HistShow.labelString:                Show Hist     
+xsonar*HistFileMenuBar*marginWidth:                    3
+xsonar*HistFileMenuBar*marginHeight:                   3
+xsonar*HistDialog*HistFileButton.labelString:          File     
+!
+! Nav Window Button Frame Resources
+!
+xsonar*NavDialog*WindowFrame.shadowType:               shadow_etched_in
+xsonar*NavDialog*WindowFrame*shadowThickness:          2
+xsonar*NavDialog*WindowFrame*borderColor:              red
+!
+! Buttons on nav display
+!
+xsonar*NavDialog*foreground:               black
+xsonar*NavDialog*background:               gainsboro
+xsonar*NavDialog*FileButton.labelString:               Navigation
+xsonar*NavDialog*OptionsButton.labelString:            Options
+xsonar*NavDialog*ShowNav.labelString:                  Sonar Data
+xsonar*NavDialog*AsciiNavButton.labelString:           Ascii File
+xsonar*NavDialog*ExitButton.labelString:               Exit
+xsonar*NavDialog*PlaceBox.labelString:                 Outline Image
+xsonar*NavDialog*TduLineSpacing.labelString:           Print Setup 
+!
+! Navigation Drawing Area
+!
+xsonar*NavDialog*NavWindow.background:                 black
+xsonar*NavDialog*NavWindow.foreground:                 white
+xsonar*NavDialog*resizePolicy:                         RESIZE_ANY
+!
+! Setup Dialog 
+!
+xsonar*SetupDialog*FileMenuBar*marginWidth:                  3
+xsonar*SetupDialog*FileMenuBar*marginHeight:                 3
+xsonar*SetupDialog*background:                               GainsBoro
+xsonar*SetupDialog*foreground:                               Navy
+xsonar*SetupDialog*bottomShadowColor:                        black
+xsonar*SetupDialog*topShadowColor:                           white
+xsonar*SetupDialog*FileNameLabel*background:                 navy
+xsonar*SetupDialog*FileNameLabel*foreground:                 white
+!
+xsonar*SetupDialog*SwathBulletin.shadowType:                 SHADOW_ETCHED_IN
+xsonar*SetupDialog*SwathBulletin.shadowThickness:            4
+xsonar*SetupDialog*SwathBulletin.marginHeight:               10
+!
+xsonar*SetupDialog*ProcessBulletin.shadowType:               SHADOW_ETCHED_IN
+xsonar*SetupDialog*ProcessBulletin.shadowThickness:          4
+xsonar*SetupDialog*ProcessBulletin.marginHeight:             10
+!
+xsonar*SetupDialog*ScaleFrame.shadowType:                    SHADOW_ETCHED_IN
+xsonar*SetupDialog*ScaleFrame.shadowThickness:               4
+!
+xsonar*SetupDialog*StretchFrame.shadowType:                  SHADOW_ETCHED_IN
+xsonar*SetupDialog*StretchFrame.shadowThickness:             4
+!
+xsonar*SetupDialog*SecondToggleFrame.shadowType:             SHADOW_ETCHED_IN
+xsonar*SetupDialog*SecondToggleFrame.shadowThickness:        4
+!
+xsonar*SetupDialog*SwathWidthLabel.x:                        15
+xsonar*SetupDialog*SwathWidthLabel.y:                        8
+xsonar*SetupDialog*SwathHolder.y:                            35
+!
+xsonar*SetupDialog*ProcessingLabel.x:                        15
+xsonar*SetupDialog*ProcessingLabel.y:                        8
+xsonar*SetupDialog*ProcessHolder.y:                          35
+!
+xsonar*SetupDialog*LowStretchScale.width:                    250
+!
+!
+! This is how you scale the width of a text widget:
+!
+/*
+xsonar*DemuxSetupDialog*AlongTrackText.columns:              5
+xsonar*DemuxSetupDialog*AcrossTrackText.columns:             5
+xsonar*DemuxSetupDialog*PortOffsetText.columns:              5
+xsonar*DemuxSetupDialog*StbdOffsetText.columns:              5
+xsonar*DemuxSetupDialog*RangeText.columns:                   5
+xsonar*DemuxSetupDialog*ScanSkipText.columns:                5
+xsonar*DemuxSetupDialog*PortNormalizeText.columns:           5
+xsonar*DemuxSetupDialog*PortMaxNormalizeText.columns:        5
+xsonar*DemuxSetupDialog*StbdNormalizeText.columns:           5
+xsonar*DemuxSetupDialog*StbdMaxNormalizeText.columns:        5
+*/
+xsonar*DemuxSetupDialog*PortOffsetLabel.labelString:         Port Offset:
+xsonar*DemuxSetupDialog*StbdOffsetLabel.labelString:         Stbd offset:
+xsonar*DemuxSetupDialog*AlongTrackLabel.labelString:         Along Track:
+xsonar*DemuxSetupDialog*AcrossTrackLabel.labelString:        Across Track:
+xsonar*DemuxSetupDialog*RangeLabel.labelString:              Range (meters):
+xsonar*DemuxSetupDialog*ScanSkipLabel.labelString:           Start scan: 
+xsonar*DemuxSetupDialog*PortNormalizeLabel.labelString:      Port Normalize: 
+xsonar*DemuxSetupDialog*StbdNormalizeLabel.labelString:      Stbd Normalize: 
+xsonar*DemuxSetupDialog*PortMaxNormalizeLabel.labelString:   Port Max Norm: 
+xsonar*DemuxSetupDialog*StbdMaxNormalizeLabel.labelString:   Stbd Max Norm: 
+!
+! Setup Dialog Button and Label Names
+!
+xsonar*SetupDialog*ScaleLineText.columns:                    5
+xsonar*SetupDialog*ScaleLineLabel.labelString:               Scale Interval:
+xsonar*SetupDialog*ScaleLineWidthLabel.labelString:          Scale Line Width: 
+xsonar*SetupDialog*OptionsButton.labelString:                Options
+xsonar*SetupDialog*BeamButton.labelString:                   Beam Pattern
+xsonar*SetupDialog*DemuxSetupButton.labelString:             Demultiplexing
+xsonar*SetupDialog*NavUnitsLabel.labelString:                Navigation:
+xsonar*SetupDialog*ScaleLabel.labelString:                   Map Scale:
+xsonar*SetupDialog*SwathWidthLabel.labelString:              Swath Width:
+xsonar*SetupDialog*SwathWidthLabel*alignment:                ALIGNMENT_CENTER
+xsonar*SetupDialog*ProcessingLabel.labelString:              Process:
+xsonar*SetupDialog*GridTypeLabel.labelString:                Map Grid Units:
+xsonar*SetupDialog*StretchLabel.labelString:                 Stretch Values:
+xsonar*SetupDialog*FileButton.labelString:                   File
+xsonar*SetupDialog*FileRetrieveButton.labelString:           Retrieve
+xsonar*SetupDialog*FileTypeButton.labelString:               Type
+xsonar*SetupDialog*DoneButton.labelString:                   Setup
+xsonar*SetupDialog*GetValuesButton.labelString:              Store Values
+xsonar*SetupDialog*PortBitShiftScale.scaleWidth:             150
+xsonar*SetupDialog*StbdBitShiftScale.scaleWidth:             150
+xsonar*SetupDialog*EightBitToggle*width:                     100
+xsonar*SetupDialog*SixteenBitToggle*width:                   100
+!
+! Swath dialog
+!
+xsonar*SwathLabel.labelString:                               Enter swath width:
+xsonar*SwathLabel*alignment:                                 ALIGNMENT_CENTER
+xsonar*SwathDialog*background:                               Peach Puff
+xsonar*SwathDialog*foreground:                               black
+!
+! The right way to specify colors:
+!
+!xsonar*SetupDialog*SwathWidthLabel*foreground:              Coral
+!xsonar*SetupDialog*SwathWidthLabel*background:     
+!
+!  File Selection Box
+!
+xsonar*FileDialog*title:                                     File Selection
+xsonar*FileDialog*background:                                MediumAquamarine
+xsonar*FileDialog*foreground:                                gray22
+xsonar*FileBox*bottomShadowColor:                            gray22
+xsonar*FileBox*topShadowColor:                               PaleGoldenRod
+xsonar*FileBox*shadowType:                                   shadow_in
+xsonar*FileBox*shadowThickness:                              2
+!
+!  Message Dialog
+!
+xsonar*MessageDialog*background:                             Peach Puff
+xsonar*MessageDialog*foreground:                             black
+!
+!  Check Central Longitude Dialog
+!
+xsonar*CheckLonDialog*background:                             Peach Puff
+xsonar*CheckLonDialog*foreground:                             black
+!
+!  Drawing widget in Sonar Map dialog
+!
+xsonar*OrientDialog*ShowProgress.background:                 black
+xsonar*OrientDialog*ShowProgress.foreground:                 white
+!
+!  Filter Dialog
+!
+xsonar*FilterDialog*background:                              Peach Puff
+xsonar*FilterDialog*foreground:                              black
+!
+!  Image Dialog
+!
+xsonar*ComboDialog*background:                               thistle
+xsonar*ComboDialog*foreground:                               black
+!
+!  Raster Image Map Dialog
+!
+xsonar*BoundsDialog*background:                               GainsBoro
+xsonar*BoundsDialog*foreground:                               navy
+!
+!  Beam Pattern Number of Pings Dialog
+!
+xsonar*BeamSetupDialog*background:                               GainsBoro
+xsonar*BeamSetupDialog*foreground:                               navy
+!
+!  TDU-850 setup dialog
+!
+xsonar*TduSetupDialog*background:                               GainsBoro
+xsonar*TduSetupDialog*foreground:                               navy
+!
+!  Drawing widget in Status Dialog
+!
+xsonar*FilterDialog*StatusDialog*background:                    GainsBoro
+xsonar*FilterDialog*StatusDialog*ProgressFrame*DrawProgress*background:   black
+xsonar*FilterDialog*StatusDialog*ProgressFrame*borderColor:     Gainsboro
+!
+!  Drawing widget in Status Dialog
+!
+xsonar*SetupDialog*StatusDialog*ProgressFrame*borderColor:     Gainsboro
+xsonar*SetupDialog*StatusDialog*background:                    GainsBoro
+xsonar*SetupDialog*StatusDialog*ProgressFrame*DrawProgress*background:   black
+!
+!
+!
+xsonar*ConvertDialog*StatusDialog*ProgressFrame*borderColor:     Gainsboro
+xsonar*ConvertDialog*StatusDialog*background:                    GainsBoro
+xsonar*ConvertDialog*StatusDialog*ProgressFrame*DrawProgress*background:   black
+!
+!
+xsonar*MainForm*StatusDialog*ProgressFrame*borderColor:     Gainsboro
+xsonar*MainForm*StatusDialog*background:                    GainsBoro
+xsonar*MainForm*StatusDialog*ProgressFrame*DrawProgress*background:   black
+!
+!
+!
+xsonar*ComboDialog*StatusDialog*background:                    GainsBoro
+xsonar*ComboDialog*StatusDialog*ProgressFrame*DrawProgress*background:   black
+xsonar*ComboDialog*StatusDialog*ProgressFrame*borderColor:     Gainsboro
+!
+!  Dialog for updating scan size
+!
+xsonar*ScanDialog*HeaderText*columns:                       15
+xsonar*ScanDialog*foreground:                               navy
+xsonar*ScanDialog*background:                               GainsBoro
+!
+!  Dialog for converting image formats.
+!
+xsonar*ConvertDialog*foreground:                               navy
+xsonar*ConvertDialog*background:                               GainsBoro
+!
+!  Dialog for fish layback.
+!
+xsonar*LaybackDialog*foreground:                               navy
+xsonar*LaybackDialog*background:                               GainsBoro
+!
+!  Dialog for fish layback editing.
+!
+xsonar*NavTextDialog*foreground:                               navy
+xsonar*NavTextDialog*background:                               GainsBoro
