@@ -1,0 +1,28 @@
+Package: xsonar
+Version: 0.5
+Revision: 1
+Source: http://schwehr.org/software/xsonar/%n-%v.tar.bz2
+Source-MD5: c171ec3a4105257769a802f86d60fd21
+BuildDepends: lesstif
+Depends: lesstif-shlibs, app-defaults
+CompileScript: <<
+  echo "Ignore make complaining 2 times about byteOrder"
+  make
+<<
+InstallScript: <<
+  mkdir -p %i/bin
+  cp xsonar/xsonar %i/bin/
+  mkdir -p %i/etc/app-defaults
+  cp xsonar/XSonar.ad %i/etc/app-defaults/
+<<
+DocFiles: README.txt
+Description: USGS sidescan sonar processing
+DescDetail: <<
+Talk about the USGS OpenFile report
+<<
+DescPort: <<
+  FIX: what license and homepage????  Who to credit as authors?
+<<
+License: Public Domain
+Homepage: http://schwehr.org/software/xsonar
+Maintainer: Kurt Schwehr <goatbar@users.sourceforge.net>
