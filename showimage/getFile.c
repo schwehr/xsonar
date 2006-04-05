@@ -1,4 +1,4 @@
-
+#include <unistd.h>
 
 #include "showimage2.h"
 #include "sonar.h"
@@ -18,11 +18,11 @@ XtPointer              callback_data;
 
     char *file;
     char *filename;
-    unsigned char *readBuffer;
+    /*unsigned char *readBuffer;*/
 
     XmString file_message;
 
-    long position;
+    /*long position;*/
 
     void message_display();
     void clearWindow();

@@ -17,14 +17,14 @@ XtPointer *call_data;
     Arg args[40];
     Cardinal n;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */
 
-    int i;
+    /*int i;*/
 
     Widget telemDialog;
     Widget telemWindow;
@@ -43,7 +43,7 @@ XtPointer *call_data;
     Widget telemSwath;
     Widget telemSwathLabel;
     Widget telemRoll;
-    Widget telemRollLabel;
+    /*Widget telemRollLabel;*/
     Widget telemRange;
     Widget telemRangeLabel;
     Widget telemAngle;
@@ -606,8 +606,8 @@ struct draw *drawarea;
     void usgsTelem();
     void qmipsTelem();
 
-    Arg args[40];
-    Cardinal  n;
+    /*Arg args[40];*/
+    /*Cardinal  n;*/
 
     int num_scans;
 
@@ -860,23 +860,23 @@ unsigned long ping;
 {
  
     int i;
-    int hour, min;
+    /*int hour, min;*/
     int range;
 
-    double sec;
+    /*double sec;*/
 
     short cal[6];
     short invstardate();
 
     long stardate_factor;
     long julian();
-    long pixelValue;
+    /*long pixelValue;*/
 
     double metersPerPixel;
     double beamAngle;
     double lon, lat;
     double east, north;
-    double aziDegrees;
+    /*double aziDegrees;*/
 
     void getCentralLon();
     void calcPosition();
@@ -959,13 +959,13 @@ unsigned long x, y;
 unsigned long ping;
 {
 
-    int range;
+  /*int range;*/
 
-    long pixelValue;
+    /*long pixelValue;*/
 
-    double metersPerPixel;
-    double beamAngle;
-    double lon, lat;
+    /*double metersPerPixel;*/
+    /*double beamAngle;*/
+    /*double lon, lat;*/
 /*
     fprintf(stdout, "day = %d\n", qmipsScans[ping]->day);
     fprintf(stdout, "month = %d\n", qmipsScans[ping]->month);

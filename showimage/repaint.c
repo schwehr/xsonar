@@ -11,7 +11,7 @@ XtPointer             client_data;
 XtPointer                 call_data; 
 {
     struct draw *drawarea = (struct draw * ) client_data;
-    GC gc;
+    /*GC gc;*/
     unsigned int width, height;
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */

@@ -4,7 +4,9 @@
  *
  */
 
-#include     "showimage2.h"
+#include <unistd.h>
+
+#include "showimage2.h"
 #include "externals.h"
 
 #define     MAX_GRAY 256            /* range of pixel values */
@@ -17,7 +19,7 @@ XmAnyCallbackStruct        *callback_data;
 
 
     struct draw *drawarea = (struct draw * ) client_data;
-    GC gc;
+    /*GC gc;*/
     unsigned int width, height;
 
     Widget zoomWindow;
@@ -243,11 +245,12 @@ int displayDataPad;
 
     if(widget == XtNameToWidget(drawarea->shell, "*MainEqualize"))
         doMain++;
-    if(widget == XtNameToWidget(drawarea->shell, "*ZoomEqualize"))
+    if(widget == XtNameToWidget(drawarea->shell, "*ZoomEqualize")) {
         if(drawarea->magnify == 1)
             doSub++;
         else
             doMagnify++;
+    }
 
 
     bytesPerPixel = drawarea->bitsPerPixel / 8;

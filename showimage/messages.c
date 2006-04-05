@@ -10,22 +10,20 @@ void message_display(drawarea, file_status)
 struct draw *drawarea;
 int file_status;
 {
-
-
     Arg args[40];
 
     int n;
     int check;
     int answer;
-    int i;
+    /*int i;*/
 
     Widget messagedialog;
     Widget messagebox;
     Widget messagebutton;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */

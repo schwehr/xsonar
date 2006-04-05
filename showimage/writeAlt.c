@@ -1,4 +1,4 @@
-
+#include <unistd.h>
 #include "showimage2.h"
 #include "externals.h"
 

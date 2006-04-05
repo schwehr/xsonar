@@ -12,10 +12,10 @@ struct draw *drawarea;
      Cardinal n;
 
      Widget clonDialog;
-     Widget clonbutton;
+     /*Widget clonbutton;*/
      Widget clonForm;
      Widget clonRowColumn1;
-     Widget clonRowColumn2;
+     /*Widget clonRowColumn2;*/
      Widget buttonRowColumn;
      Widget clonMessage;
      Widget clonText;

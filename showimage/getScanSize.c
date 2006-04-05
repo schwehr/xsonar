@@ -1,3 +1,4 @@
+#include <unistd.h>
  
 #include "sonar.h"
 #include "showimage2.h"
@@ -15,7 +16,7 @@ int warning;
     struct long_pos_buf usgs;
 
     Widget scanDialog;
-    Widget scanbutton;
+    /*Widget scanbutton;*/
     Widget scanForm;
     Widget scanRowColumn1;
     Widget buttonRowColumn;

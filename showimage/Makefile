@@ -7,32 +7,28 @@
 #  set the -lXpm library to -lXp.
 #
 
-#LIBFLAGS= -L/usr/X11R6/lib -lXpm -lXext -lXmu -lXm -lXt -lX11
+BYTEORDER:=${shell ../xsonar/byteOrder}
 
-LIBFLAGS= -L/usr/X11R6/lib -lXp -lXext -lXmu -lXm -lXt -lX11
+LIBFLAGS := -L/usr/X11R6/lib -lXp -lXext -lXmu -lXm -lXt -lX11
+LIBFLAGS += -L/sw/lib -L../usgsmap
 MAPLIB= -lmap
 MATHLIB= -lm
-OPTFLAGS= -I/usr/X11R6/include
-CFLAGS= -c -g $(OPTFLAGS)
-HEADERS=        showimage2.h sonar.h
+OPTFLAGS= -I/usr/X11R6/include -Wall 
+CFLAGS := -c -g $(OPTFLAGS) -I/sw/include ${BYTEORDER}
+#HEADERS=        showimage2.h sonar.h
+
+# SRCS= 	main.c display.c telemetry.c messages.c featureRemove.c \
+# 		repaint.c getSwath.c getFile.c equalize.c events.c \
+# 		fileSelect.c flipColor.c getScanSize.c zoom.c \
+# 		correctAlt.c writeAlt.c showAlt.c stretch.c optionsFile.c \
+# 		getHeaderInfo.c setFileType.c getClon.c utilities.c progress.c \
+#                 newClon.c bitShift.c showTrace.c traceBeamLimits.c writeBeamLimits.c \
+#                 showBeamLimits.c
 
 
-OBJS= 	main.o display.o telemetry.o messages.o featureRemove.o \
-		repaint.o getSwath.o getFile.o equalize.o events.o \
-		fileSelect.o flipColor.o getScanSize.o zoom.o \
-		correctAlt.o writeAlt.o showAlt.o stretch.o optionsFile.o \
-		getHeaderInfo.o setFileType.o getClon.o utilities.o progress.o \
-                newClon.o bitShift.o showTrace.o traceBeamLimits.o writeBeamLimits.o \
-                showBeamLimits.o
 
-SRCS= 	main.c display.c telemetry.c messages.c featureRemove.c \
-		repaint.c getSwath.c getFile.c equalize.c events.c \
-		fileSelect.c flipColor.c getScanSize.c zoom.c \
-		correctAlt.c writeAlt.c showAlt.c stretch.c optionsFile.c \
-		getHeaderInfo.c setFileType.c getClon.c utilities.c progress.c \
-                newClon.c bitShift.c showTrace.c traceBeamLimits.c writeBeamLimits.c \
-                showBeamLimits.c
-
+SRCS:=${wildcard *.c}
+OBJS:=${SRCS:.c=.o}
 
 IFLAGS= -I/usr/include/mit/X11
 CC= gcc
@@ -44,7 +40,6 @@ RM= rm -f
 
 
 .c.o:
-	$(RM) $@
 	$(CC) $(CFLAGS)  $*.c
 
 #$(SRCS):	$(HEADERS)

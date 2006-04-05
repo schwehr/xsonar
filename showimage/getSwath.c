@@ -1,4 +1,4 @@
- 
+#include <stdlib.h> 
 #include "showimage2.h"
 #include "externals.h"
 
@@ -11,10 +11,10 @@ struct draw *drawarea;
      Cardinal n;
 
      Widget swathDialog;
-     Widget swathbutton;
+     /*Widget swathbutton;*/
      Widget swathForm;
      Widget swathRowColumn1;
-     Widget swathRowColumn2;
+     /*Widget swathRowColumn2;*/
      Widget buttonRowColumn;
      Widget swathMessage;
      Widget swathText;

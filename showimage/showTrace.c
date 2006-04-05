@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "showimage2.h" 
 #include "externals.h" 
 #include "sonar.h" 
@@ -21,21 +22,21 @@ XtPointer     call_data;
     XFontStruct *label_font;
     GC trace_gc;
 
-    Status result;
+    /*Status result;*/
 
-    char lon_label[255];
+    /*char lon_label[255];*/
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap traceColormap;
-    XColor colors[256];
-    Colormap defaultColormap;              /* colormap from server */
+    /*Colormap traceColormap;*/
+    /*XColor colors[256];*/
+    /*Colormap defaultColormap;*/              /* colormap from server */
 
 
     unsigned long main_window_valuemask;
-    unsigned long cell;                      /* pixel number */
-    unsigned long pixels[256];               /* pixel values in colormap */
-    unsigned long plane_masks[8];            /* number of planes in system */
+    /*unsigned long cell;*/                      /* pixel number */
+    /*unsigned long pixels[256];*/               /* pixel values in colormap */
+    /*unsigned long plane_masks[8];*/            /* number of planes in system */
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
 

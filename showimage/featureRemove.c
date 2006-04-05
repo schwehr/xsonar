@@ -1,6 +1,8 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/stat.h>
  
 #include "showimage2.h"
-#include <sys/stat.h>
 #include "externals.h"
 
 void featureRemove(w, clientData, callData)
@@ -15,15 +17,15 @@ XtPointer    callData;
     Arg args[40];
     Cardinal n;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */
 
     Widget featureRemoveDialog;
-    Widget featureRemovebutton;
+    /*Widget featureRemovebutton;*/
     Widget featureRemoveForm;
     Widget featureRemoveRowColumn1;
     Widget buttonRowColumn;
@@ -41,11 +43,11 @@ XtPointer    callData;
     Widget zoomDialog;
 
     int answer;
-    int pixelLocation;
-    int i;
+    /*int pixelLocation;*/
+    /*int i;*/
 
 
-    char *temp;
+    /*char *temp;*/
 
     Dimension shellx;
     Dimension shelly;
@@ -562,7 +564,7 @@ int pixReplace;
     long replacePixel;
 
     int i, j;
-    int currentPixel;
+    /*int currentPixel;*/
     int inbytes;
     int outbytes;
     int scan;
@@ -764,14 +766,14 @@ int pixLocation;
 
     int answer;
     int status;
-    int i;
+    /*int i;*/
 
     Arg args[40];
     Cardinal n;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */

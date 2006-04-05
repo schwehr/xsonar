@@ -89,8 +89,8 @@ XEvent * ev;
 
     int i, n;
     int status;
-    int fore;
-    int startx, starty;
+    /*int fore;*/
+    /*int startx, starty;*/
     int motionCount;
     int printingTelem;
     int anchor_x, anchor_y, lastx, lasty;
@@ -98,7 +98,7 @@ XEvent * ev;
     int num_scans;
     int ping;
 
-    unsigned int oldRecWidth, oldRecHeight;
+    /*unsigned int oldRecWidth, oldRecHeight;*/
     unsigned int newRecWidth, newRecHeight;
 
     long pixelValue;
@@ -269,7 +269,7 @@ printf("Window status of XtWindow(graphics) is %x\n", XtWindow(drawarea->graphic
                    "X = %.3d  Y = %.3d DN = %.3d Range = %5.1f Scan number = %d  ",
                     ev->xbutton.x, ev->xbutton.y, pixelValue,
                     (float) abs(ev->xbutton.x -256) * metersPerPix,
-		    ping + drawarea->top_ping);
+			ping + drawarea->top_ping);
 
                 XDrawImageString(XtDisplay(drawarea->graphics),
                     XtWindow(drawarea->graphics), gc, 0, 512,

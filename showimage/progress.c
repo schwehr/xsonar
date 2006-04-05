@@ -28,9 +28,9 @@ char *messageBuffer;
 
     Boolean checkingEvents;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */
@@ -40,7 +40,7 @@ char *messageBuffer;
     Arg args[40];
     Cardinal n;
 
-    int i;
+    /*int i;*/
 
     XmUpdateDisplay(drawarea->shell);
 

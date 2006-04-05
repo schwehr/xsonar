@@ -1,7 +1,9 @@
+#include <unistd.h>
+#include <X11/Xutil.h>
+
 #include "showimage2.h"
 #include "sonar.h"
 #include "externals.h"
-#include <X11/Xutil.h>
 
 void show_image(w, client_data, call_data)
 Widget         w;
@@ -12,32 +14,33 @@ XtPointer     call_data;
 
     struct draw *drawarea = (struct draw * ) client_data;
 
-    Widget message;
+    /*Widget message;*/
     Widget progressWindow;
 
     GC progressGC;
 
-    Arg args[40];
+    /*Arg args[40];*/
 
-    XEvent event;
-    XWindowAttributes attributes;
+    /*XEvent event;*/
+    /*XWindowAttributes attributes;*/
  
-    int i, j, k, l, n, y, z;
-    int numlines;
+    int i, j, k, z;
+    /*int i, j, k, l, n, y, z;*/
+    /*int numlines;*/
     int number_of_scans;
-    int scansizeInBytes;
-    int data_offset;
-    int qmipsReadOffset;
+    /*int scansizeInBytes;*/
+    /*int data_offset;*/
+    /*int qmipsReadOffset;*/
     int display_offset;
-    int width, height;
-    int pix;
+    /*int width, height;*/
+    /*int pix;*/
     int displayDataPad;
-    int pix_location;
-    int bufferBytes;
-    int fileSize;
-    int fileStatus;
+    /*int pix_location;*/
+    /*int bufferBytes;*/
+    /*int fileSize;*/
+    /*int fileStatus;*/
     int currentInbytes;
-    int bytesToRead;
+    /*int bytesToRead;*/
     int bytesPerPixel;
 
     int displayDepth;
@@ -50,13 +53,13 @@ XtPointer     call_data;
     unsigned char convertData;
 
     off_t position;
-    off_t filePosition;
+    /*off_t filePosition;*/
 
-    float percentDone;
+    /*float percentDone;*/
 
     Dimension progressWindowWidth;
     Dimension progressWindowHeight;
-    Dimension drawAmount;
+    /*Dimension drawAmount;*/
 
     void showProgress();
     void message_display();
@@ -68,7 +71,7 @@ XtPointer     call_data;
 
     char messageBuffer[40];
 
-    unsigned char *headerPtr;
+    /*unsigned char *headerPtr;*/
 
     int getHeaderInfo();
     unsigned short get_short();

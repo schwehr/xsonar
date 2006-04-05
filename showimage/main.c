@@ -14,6 +14,8 @@
  *
  */
 
+#include <unistd.h>
+
 #include "showimage2.h"
 #include "sonar.h"
 #include  "iconBitmap.h"
@@ -282,6 +284,7 @@ char *argv[];
 
     /* Start 'er up */
 
+
     if(INTEL)
         fprintf(stderr, "machine byte order is INTEL\n");
     else if (MOTOROLA)
@@ -414,7 +417,7 @@ char *argv[];
     depth = DefaultDepth(XtDisplay(drawboard.shell), 
                               DefaultScreen(XtDisplay(drawboard.shell)));
 
-    fprintf(stderr, "Default depth of screen = %ld\n", depth); 
+    fprintf(stderr, "Default depth of screen = %ld\n", (long int)depth); 
 
     if(depth < 8)
         {

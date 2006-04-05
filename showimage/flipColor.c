@@ -19,8 +19,8 @@ XtPointer    callback_data;
     unsigned short intensity;
     unsigned short red_value, green_value, blue_value;
 
-    XColor tempGrayMap[50];   /* for the TrueColor Visual colormap flipping */
-    int invertCell;         /* temp counter for TrueColor colormap invert */
+    /*XColor tempGrayMap[50];*/   /* for the TrueColor Visual colormap flipping */
+    /*int invertCell;*/         /* temp counter for TrueColor colormap invert */
 
     int i, j;
     int currentCell, newCell;
@@ -107,11 +107,12 @@ XtPointer    callback_data;
 
     if(w == XtNameToWidget(drawarea->shell, "*flipColorMap"))
         doMain++;
-    if(w == XtNameToWidget(drawarea->shell, "*ZoomFlipColorButton"))
+    if(w == XtNameToWidget(drawarea->shell, "*ZoomFlipColorButton")) {
         if(drawarea->magnify == 1)
             doSub++;
         else
             doMagnify++;
+    }
 
     zoomArea = XtNameToWidget(drawarea->shell, "*ZoomArea");
 

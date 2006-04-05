@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <unistd.h>
 
 #include "showimage2.h" 
 #include "externals.h" 
@@ -11,13 +13,13 @@ XmAnyCallbackStruct        *callback_data;
     Widget zoomDialog;
     Widget zoomArea;
 
-    Arg args[40];
-    int n;
+    /*Arg args[40];*/
+    /*int n;*/
     int number_of_colormaps;
 
     XFontStruct *label_font;
-    Atom ATOM_WM_COLMAP_WIN;
-    Window drawing_window;
+    /*Atom ATOM_WM_COLMAP_WIN;*/
+    /*Window drawing_window;*/
 
     XSetWindowAttributes zoomWindowAttr;    /* window attribute struct */
     unsigned long zoomWindowValueMask;
@@ -72,7 +74,7 @@ XmAnyCallbackStruct    *callback_data;
      Widget zoomDialog;
      Widget zoomArea;
 
-     unsigned char *data_ptr;
+     /*unsigned char *data_ptr;*/
 
      int width, height;
      int a, b, i, j, y, z;

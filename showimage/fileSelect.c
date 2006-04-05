@@ -11,7 +11,7 @@ XtPointer callback_data;
 
 
     struct draw *drawarea = (struct draw *) client_data;
-    XmAnyCallbackStruct *callback = (XmAnyCallbackStruct *) callback_data; 
+    /*XmAnyCallbackStruct *callback = (XmAnyCallbackStruct *) callback_data; */
 
     Arg args[40];
     Cardinal n;

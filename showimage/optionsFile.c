@@ -1,6 +1,7 @@
 /*
  *      Browse through file callback.
  */
+#include <unistd.h>
 
 #include "showimage2.h"
 #include "sonar.h"
@@ -32,15 +33,15 @@ XtPointer        call_data;
     struct draw *drawarea = (struct draw *) client_data;
 
     Arg args[40];
-    int i, n;
+    int /*i,*/ n;
     Widget pingdialog;
     Widget ping_bb;
     Widget pingbutton;
     Widget pingtext;
 
-    XColor grayScale[256];
+    /*XColor grayScale[256];*/
 
-    Colormap defaultColormap;
+    /*Colormap defaultColormap;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */

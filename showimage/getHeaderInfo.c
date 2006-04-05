@@ -1,4 +1,4 @@
-
+#include <unistd.h>
 
 #include "showimage2.h"
 #include "sonar.h"
@@ -28,7 +28,7 @@ struct draw *drawarea;
     long position;
 
     unsigned char inbuf[1024];
-    unsigned char header[256];
+    /*unsigned char header[256];*/
 
     ImageHeader rasterHeader;
 

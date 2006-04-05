@@ -15,7 +15,7 @@ XtPointer         client_data;
 XmAnyCallbackStruct         *callback_data; 
 {
     struct draw *drawarea = (struct draw * ) client_data;
-    GC gc;
+    /*GC gc;*/
 
     Widget zoomWindow, zoomArea;
 
@@ -111,7 +111,7 @@ struct draw *drawarea;
     long pixel_value;
     int min_pixel, max_pixel;
     int histogram_dist[MAX_GRAY];
-    int image_width, image_height, image_size;
+    int image_width/*, image_height, image_size*/;
     int got_min_pixel, got_max_pixel;
     int doMain, doSub, doMagnify;
 
@@ -186,11 +186,12 @@ struct draw *drawarea;
 
     if(widget == XtNameToWidget(drawarea->shell, "*MainStretch"))
          doMain++;
-    if(widget == XtNameToWidget(drawarea->shell, "*ZoomStretch"))
+    if(widget == XtNameToWidget(drawarea->shell, "*ZoomStretch")) {
          if(drawarea->magnify == 1)
              doSub++;
          else
              doMagnify++;
+    }
 
 
 

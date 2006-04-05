@@ -7,8 +7,8 @@ XtPointer          client_data;
 XtPointer      callback_data; 
 {
 
-     Arg args[40];
-     int n;
+  /*Arg args[40];*/
+     /*int n;*/
 
      struct draw *drawarea = (struct draw * ) client_data;
 

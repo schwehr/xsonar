@@ -56,24 +56,21 @@
 #define MAX_MEMORY  48000000 /* 24 megabytes of mem. */
                              /* Adjust for system as neccessary. */
 
-#ifdef vax
-#define VAX 1
-#else
-#define VAX 0
-#endif
-
+#if 0
 #if defined(mc68000) || defined (sony) || defined(sgi) || defined(sun)
 #define MOTOROLA 1
 #else
 #define MOTOROLA 0
 #endif
+#endif
 
+#if 0
 #if defined(ultrix) || defined(__alpha) || defined(__ultrix)  || defined(i386)
 #define INTEL 1
 #else
 #define INTEL 0
 #endif
-
+#endif
 
 #include <stdio.h>
 #include <X11/Intrinsic.h>

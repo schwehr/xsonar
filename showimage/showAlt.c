@@ -11,15 +11,15 @@ int displayFlag;
     int number_of_scans;
     int i, j;
     int offset;
-    int parse_return;
+    /*int parse_return;*/
     int displayDataPad;
     int ping;
 
     Widget portAltOnButton;
-    Widget portAltOffButton;
+    /*Widget portAltOffButton;*/
 
     Widget stbdAltOnButton;
-    Widget stbdAltOffButton;
+    /*Widget stbdAltOffButton;*/
 
     Widget zoomPortAltButton;
     Widget zoomStbdAltButton;

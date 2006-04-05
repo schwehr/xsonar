@@ -1,3 +1,4 @@
+#include <unistd.h>
 
 #include "showimage2.h"
 #include "sonar.h"
@@ -271,7 +272,7 @@ XEvent * ev;
 unsigned long *anchor_x, *anchor_y, *lastx, *lasty;
 {
 
-     long pixel_value;
+  /*long pixel_value;*/
 
      switch(ev->xbutton.button)
           {
