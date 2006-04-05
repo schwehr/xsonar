@@ -1,0 +1,320 @@
+
+!  Resource file for showimage.c 
+!
+!
+!
+! Top-level window
+!
+ShowImage.title:                   ShowImage
+!
+!  Default fonts
+!
+ShowImage*fontList:       -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+!       -adobe-courier-bold-r-normal-*-120-*-*-*-*-ISO8859-1
+!       -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+!       -adobe-helvetica-bold-r-*-*-12-120-*-*-*-*-*-*
+!       -bigelow & holmes-menu-*-r-*-*-10-100-75-*-p-56-iso8859-1
+!       -adobe-helvetica-bold-r-*-*-10-100-*-*-*-*-*-*
+!       -adobe-itc lubalin graph-demi-r-normal-*-12-120-*-*-*-*-*-*
+!
+ShowImage*topShadowColor:          white
+ShowImage*bottomShadowColor:       gray22
+ShowImage*highlightColor:          IndianRed
+ShowImage*highlightOnEnter:        True
+ShowImage*background:              Gainsboro
+ShowImage*foreground:              black
+ShowImage*borderColor:             red
+ShowImage*shadowThickness:         2
+!
+! Frame Resources
+!
+ShowImage*buttonFrame.shadowType:               shadow_etched_in
+ShowImage*buttonFrame*shadowThickness:          2
+
+ShowImage*StbdBitShiftFrame.shadowType:         shadow_etched_in
+ShowImage*StbdBitShiftFrame.marginWidth:        2
+ShowImage*StbdBitShiftFrame.marginHeight:       2
+ShowImage*StbdBitShiftFrame*borderWidth:        3
+ShowImage*StbdBitShiftFrame*borderColor:        gainsboro
+
+ShowImage*StbdBitShiftScale.scaleWidth:         240
+
+ShowImage*PortBitShiftFrame.shadowType:         shadow_etched_in
+ShowImage*PortBitShiftFrame.marginWidth:        2
+ShowImage*PortBitShiftFrame.marginHeight:       2
+ShowImage*PortBitShiftFrame*shadowThickness:    2
+ShowImage*PortBitShiftFrame*borderWidth:        3
+ShowImage*PortBitShiftFrame*borderColor:        gainsboro
+!
+! Control Buttons
+!
+ShowImage*menuBar*marginWidth:                  5
+ShowImage*menuBar*marginHeight:                 3
+ShowImage*menuBar.resizeHeight:                 True
+ShowImage*menuBar.resizeWidth:                  True
+ShowImage*menuBar.background:                   GainsBoro
+ShowImage*menuBar.foreground:                   navy
+ShowImage*menuBar.shadowThickness:              1
+!
+! background and foreground of the label widget 
+! on the main display.
+!
+ShowImage*fileName.background:                  GainsBoro
+ShowImage*fileName.foreground:                  navy
+!
+! Button names on main display
+!
+ShowImage*clearButton.labelString:              Clear
+ShowImage*imageButton.labelString:              Image
+ShowImage*PortAltButton.labelString:            Port Altitude
+ShowImage*PortAltOnButton.labelString:          On
+ShowImage*PortAltOffButton.labelString:         Off
+ShowImage*StbdAltButton.labelString:            Stbd Altitude
+ShowImage*StbdAltOnButton.labelString:          On
+ShowImage*StbdAltOffButton.labelString:         Off
+ShowImage*PortShowBeamLimitButton.labelString:           Port Beam Range
+ShowImage*PortShowBeamLimitOnButton.labelString:         On
+ShowImage*PortShowBeamLimitOffButton.labelString:        Off
+ShowImage*StbdShowBeamLimitButton.labelString:           Stbd Beam Range 
+ShowImage*StbdShowBeamLimitOnButton.labelString:         On
+ShowImage*StbdShowBeamLimitOffButton.labelString:        Off
+ShowImage*ReDisplayButton.labelString:          Refresh
+ShowImage*fileButton.labelString:               File
+ShowImage*FileRetrieveButton.labelString:       Retrieve
+ShowImage*MainSaveImageButton.labelString:      Save
+ShowImage*helpButton.labelString:               Help
+ShowImage*readSonarButton.labelString:          Sonar
+ShowImage*displayButton.labelString:            Display
+ShowImage*exitButton.labelString:               Quit
+ShowImage*TelemetryButton.labelString:          Telemetry
+ShowImage*brightenButton.labelString:           Enhance
+ShowImage*MainEqualize.labelString:             Equalize Histogram
+ShowImage*MainStretch.labelString:              Contrast Stretch
+ShowImage*flipColorMap.labelString:             Invert Colors
+ShowImage*optionsButton.labelString:            Options
+ShowImage*gotoPingButton.labelString:           Goto Ping
+ShowImage*gotoStartButton.labelString:          Goto Start
+ShowImage*FileTypeButton.labelString:           Type
+ShowImage*UsgsButton.labelString:               Xsonar
+ShowImage*QmipsButton.labelString:              QMIPS
+ShowImage*RasterButton.labelString:             Raster Map
+ShowImage*UndefinedButton.labelString:          OTHER
+ShowImage*GetCentralLonButton.labelString:      Central Lon
+ShowImage*BitShiftButton.labelString:           Bit Shifter
+ShowImage*BitShiftShow.labelString:             Display
+ShowImage*BitShiftHide.labelString:             Put Away
+ShowImage*TraceButton.labelString:              Trace Amplitudes
+!
+! Zoom Buttons
+!
+ShowImage*ZoomButton.labelString:               Zoom
+ShowImage*FeatureRemoveButton.labelString:      Feature Removal
+ShowImage*ZoomMagnify.labelString:              Magnify
+ShowImage*ZoomReset.labelString:                Reset Magnification
+ShowImage*ZoomDone.labelString:                 Close Window
+ShowImage*ZoomFileMenu.labelString:             File
+ShowImage*ZoomSaveImageButton.labelString:      Save
+ShowImage*ZoomFlipColorButton.labelString:      Invert Colors
+ShowImage*ZoomOptionsMenu.labelString:          Options
+ShowImage*ZoomAltMenu.labelString:              Altitude
+ShowImage*ZoomCorrectAltButton.labelString:     Correct
+ShowImage*ZoomCorrectPortButton.labelString:    Port
+ShowImage*ZoomCorrectStbdButton.labelString:    Stbd
+ShowImage*ZoomBeamMenu.labelString:             Beam Ranges
+ShowImage*ZoomBeamButton.labelString:           Trace
+ShowImage*ZoomBeamPortButton.labelString:       Port
+ShowImage*ZoomBeamStbdButton.labelString:       Stbd
+ShowImage*ZoomAltButton.labelString:            Display
+ShowImage*ZoomPortAltButton.labelString:        Port
+ShowImage*ZoomPortAltOnButton.labelString:      On
+ShowImage*ZoomPortAltOffButton.labelString:     Off 
+ShowImage*ZoomStbdAltButton.labelString:        Starboard
+ShowImage*ZoomStbdAltOnButton.labelString:      On
+ShowImage*ZoomStbdAltOffButton.labelString:     Off 
+ShowImage*ZoomPortShowBeamLimitButton.labelString:        Port
+ShowImage*ZoomPortShowBeamLimitOnButton.labelString:      On
+ShowImage*ZoomPortShowBeamLimitOffButton.labelString:     Off 
+ShowImage*ZoomStbdShowBeamLimitButton.labelString:        Starboard
+ShowImage*ZoomStbdShowBeamLimitOnButton.labelString:      On
+ShowImage*ZoomStbdShowBeamLimitOffButton.labelString:     Off 
+ShowImage*ZoomBrighten.labelString:             Brighten Image
+ShowImage*ZoomEqualize.labelString:             Equalize Histogram
+ShowImage*ZoomStretch.labelString:              Contrast Stretch
+ShowImage*ZoomHelpButton.labelString:           Help
+ShowImage*ZoomWriteAlts.labelString:            Write Altitudes
+ShowImage*ZoomWriteBeamLimits.labelString:      Write Beam Ranges
+!
+! Frame Area
+!
+ShowImage*drawFrame.shadowType:                 shadow_etched_in
+ShowImage*drawFrame.shadowThickness:            5
+!ShowImage*drawFrame.Foreground:                 black
+!
+! Drawing Area
+!
+ShowImage*drawArea*width:                       512
+ShowImage*drawArea*height:                      512
+ShowImage*drawArea*foreground:                  black
+ShowImage*drawArea*background:                  black
+!ShowImage*drawArea.borderColor:                IndianRed
+!ShowImage*drawArea.borderWidth:                2
+!ShowImage*drawArea.borderHeight:               2
+ShowImage*drawArea.resizePolicy:                RESIZE_ANY
+!
+! Top-level zoom window
+!
+ShowImage*ZoomDialog.title:                     ShowImage Zoom Window
+ShowImage*ZoomDialog*background:                GainsBoro
+ShowImage*ZoomDialog*foreground:                black
+ShowImage*ZoomWindow.horizontalSpacing:         3
+ShowImage*ZoomWindow.verticalSpacing:           3
+!
+! Zoom Frame Area
+!
+ShowImage*ZoomFrame.shadowType:                 shadow_etched_in
+ShowImage*ZoomFrame.shadowThickness:            5
+ShowImage*ZoomFrame*foreground:                 black
+!
+! zoom Button Frame Resources
+!
+ShowImage*ZoomButtonFrame.shadowType:           shadow_etched_in
+ShowImage*ZoomButtonFrame*shadowThickness:      2
+!
+! Zoom Drawing Area
+!
+ShowImage*ZoomDialog*ZoomArea*width:                       50
+ShowImage*ZoomDialog*ZoomArea*height:                      50     
+ShowImage*ZoomDialog*ZoomArea*background:                  black
+!
+! Zoom menu parameters
+!
+ShowImage*ZoomMenuBar*marginWidth:              5
+ShowImage*ZoomMenuBar*marginHeight:             3
+ShowImage*ZoomMenuBar.shadowThickness:          1
+!
+! Zoom done button
+!
+ShowImage*ZoomDone.labelString:                 Done
+!
+! Zoom message
+!
+!ShowImage*ZoomMessage.y:                       15
+!ShowImage*ZoomMessage.width:                   270
+!ShowImage*ZoomMessage.height:                  15
+!ShowImage*ZoomMessage.alignment:               ALIGNMENT_BEGINNING
+!
+! Top level message window
+!
+ShowImage*MessageDialog.title:                  ShowImage Messages
+!
+! Message Box
+!
+ShowImage*MessageBox.messageString:             End of file.
+ShowImage*MessageBox.dialogType:                XmDialog_Prompt
+!
+! Swath dialog
+!
+ShowImage*SwathDialog.title:                    Swath Width
+!
+! Ping dialog
+!
+ShowImage*pingInput.title:                      Goto Ping
+!
+! Ping bulletin board
+!
+ShowImage*pingBoard*width:                      340
+ShowImage*pingBoard*height:                     60
+!
+ShowImage*pingBoard.pingText*width:             190
+ShowImage*pingBoard.pingText*height:            40
+ShowImage*pingBoard.pingText*x:                 120     
+ShowImage*pingBoard.pingText*y:                 10
+!
+ShowImage*pingBoard.pingButton*width:           100
+ShowImage*pingBoard.pingButton*height:          40
+ShowImage*pingBoard.pingButton.x:               10
+ShowImage*pingBoard.pingButton.y:               10
+ShowImage*pingButton.labelString:               Goto Ping:
+!
+!
+! telemetry dialog
+!
+ShowImage*TelemDialog*fontList:    -adobe-helvetica-bold-r-normal-*-12-*-*-*-*-*-*-*
+ShowImage*TelemDialog.title:                    ShowImage Telemetry
+ShowImage*TelemBoard.resizePolicy:              RESIZE_ANY
+ShowImage*TelemDialog*bottomShadowColor:        black
+ShowImage*TelemDialog*topShadowColor:           white
+ShowImage*TelemDialog*shadowThickness:          2
+
+!
+! menu parameters
+!
+ShowImage*TelemMenuBar*marginWidth:             5
+ShowImage*TelemMenuBar*marginHeight:            3
+ShowImage*TelemMenuBar.resizeHeight:            True
+ShowImage*TelemMenuBar.resizeWidth:             True
+ShowImage*TelemMenuBar.shadowThickness:         1
+!
+ShowImage*TelemClose.width:                     50
+ShowImage*TelemClose.height:                    30
+ShowImage*TelemClose.x:                         10
+ShowImage*TelemClose.y:                         10
+ShowImage*TelemClose.labelString:               Close
+ShowImage*TelemFileMenu.labelString:            File
+ShowImage*TelemHelpButton.labelString:          Help
+!
+!
+! Scan Dialog
+!
+!ShowImage*CancelButton*width:                  100
+!ShowImage*CancelButton*height:                 40
+!
+!
+! Various File Boxes
+!
+ShowImage*GetFileDialog_popup.title:             File Select
+!
+ShowImage*ZoomSaveFileDialog_popup.title:        Save Zoomed Image
+ShowImage*MainSaveFileDialog_popup.title:        Save Main Image
+!
+!ShowImage*FileBox.dialogType:                   XmDialog_Prompt
+!showimage*FileBox*bottomShadowColor:            gray22
+!showimage*FileBox*topShadowColor:               PaleGoldenRod
+!showimage*FileBox*shadowType:                   shadow_in
+!showimage*FileBox*shadowThickness:              2
+!
+! Central Longitude Prompt
+!
+ShowImage*ClonDialog.title:                      Central Longitude
+!
+! Scale line removal dialog
+!
+ShowImage*FeatureRemoveDialog.title:                 Linear Feature Removal 
+!
+!  Drawing widget in Status Dialog
+!
+ShowImage*StatusDialog.title:                                 Showimage Monitor
+ShowImage*ZoomDialog*StatusDialog*background:                 Gainsboro
+ShowImage*ZoomDialog*StatusDialog*DrawProgress*background:    black
+ShowImage*StatusDialog*ProgressFrame*DrawProgress*background: black
+ShowImage*StatusDialog*ProgressFrame*background:              black
+ShowImage*StatusDialog*ProgressFrame*borderWidth:             5
+ShowImage*StatusDialog*ProgressFrame*borderColor:             Gainsboro
+ShowImage*StatusDialog*ProgressFrame.marginWidth:             5
+ShowImage*StatusDialog*ProgressFrame.marginHeight:            5
+ShowImage*StatusDialog*ProgressFrame*background:              Gainsboro
+ShowImage*StatusDialog*ProgressFrame*shadowThickness:         4
+!
+!  Resources for the trace dialog
+!
+ShowImage*TraceDialog.title:                     Individual Trace Amplitudes
+ShowImage*TraceFileMenuBar*marginWidth:          5
+ShowImage*TraceFileMenuBar*marginHeight:         3
+ShowImage*TraceWindow*foreground:                black
+ShowImage*TraceWindow*background:                black
+ShowImage*TraceFrame.shadowType:                 shadow_etched_in
+ShowImage*TraceFrame.shadowThickness:            5
+ShowImage*TraceFrame*foreground:                 black
+ShowImage*TraceFileButton*labelString:           File
+ShowImage*TraceExitButton*labelString:           Close
+
