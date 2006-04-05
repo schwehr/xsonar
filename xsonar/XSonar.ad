@@ -37,7 +37,7 @@ xsonar*armColor:                                    IndianRed
 xsonar*background:                                  Gainsboro
 xsonar*foreground:                                  black
 xsonar*borderColor:                                 red
-xsonar*TitleWindow*background:                      black
+!xsonar*TitleWindow*background:                      black
 xsonar*FileMenuBar*marginWidth:                     3
 xsonar*FileMenuBar*marginHeight:                    3
 !
@@ -81,8 +81,8 @@ xsonar*CombineButton.labelString:             Image
 xsonar*ConvertButton.labelString:             Convert
 xsonar*FilterButton.labelString:              Filters
 xsonar*MapButton.labelString:                 Coast Map
-#xsonar*NavButton*highlightColor:             IndianRed
-#xsonar*NavButton*highlightOnEnter:           True
+!xsonar*NavButton*highlightColor:             IndianRed
+!xsonar*NavButton*highlightOnEnter:           True
 !
 ! Main Window colors
 !

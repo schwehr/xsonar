@@ -111,7 +111,10 @@ ShowImage*ZoomButton.labelString:               Zoom
 ShowImage*FeatureRemoveButton.labelString:      Feature Removal
 ShowImage*ZoomMagnify.labelString:              Magnify
 ShowImage*ZoomReset.labelString:                Reset Magnification
-ShowImage*ZoomDone.labelString:                 Close Window
+
+! Clash with below... which is better? FIX
+!ShowImage*ZoomDone.labelString:                 Close Window
+
 ShowImage*ZoomFileMenu.labelString:             File
 ShowImage*ZoomSaveImageButton.labelString:      Save
 ShowImage*ZoomFlipColorButton.labelString:      Invert Colors
@@ -297,11 +300,12 @@ ShowImage*StatusDialog.title:                                 Showimage Monitor
 ShowImage*ZoomDialog*StatusDialog*background:                 Gainsboro
 ShowImage*ZoomDialog*StatusDialog*DrawProgress*background:    black
 ShowImage*StatusDialog*ProgressFrame*DrawProgress*background: black
-ShowImage*StatusDialog*ProgressFrame*background:              black
+
 ShowImage*StatusDialog*ProgressFrame*borderWidth:             5
 ShowImage*StatusDialog*ProgressFrame*borderColor:             Gainsboro
 ShowImage*StatusDialog*ProgressFrame.marginWidth:             5
 ShowImage*StatusDialog*ProgressFrame.marginHeight:            5
+!ShowImage*StatusDialog*ProgressFrame*background:              black
 ShowImage*StatusDialog*ProgressFrame*background:              Gainsboro
 ShowImage*StatusDialog*ProgressFrame*shadowThickness:         4
 !
