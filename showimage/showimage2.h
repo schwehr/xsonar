@@ -159,6 +159,22 @@ int getHeaderInfo(struct draw *drawarea);
 void showProgress(struct draw *drawarea, Widget w, char *messageBuffer);
 
 
+/* Added by Kurt Schwehr */
+#ifdef __GNUC__
+#define UNUSED __attribute((__unused__))
+#else
+/*!
+  \brief GNU CC attribute to denote unused paramters in function calls.
+  The attribute remove compiler warning for unused arguments and variable.  Only
+ works
+  for GNU compilers such as gcc and g++.
+
+  http://gcc.gnu.org/onlinedocs/gcc-3.4.2/gcc/Variable-Attributes.html
+*/
+#define UNUSED
+#endif
+
+
 
 
 #endif /* __SHOWIMAGE2_H__ */

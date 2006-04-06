@@ -6,8 +6,68 @@
 #define TRUE 1
 #define FALSE 0
 
+static float calculate_first_alt(UNUSED Widget w, int *file_entry, int *first_scan, int *current_scan, int *last_scan, 
+				 unsigned long anchor_x, unsigned long anchor_y, 
+				 int dist_to_nadir, float zoom_alt_to_pixel, struct draw *drawarea)
+/*Widget w;
+int *file_entry, *first_scan, *current_scan, *last_scan;
+unsigned long anchor_x, anchor_y;
+int dist_to_nadir;
+float zoom_alt_to_pixel;
+struct draw *drawarea;*/
+{
+     float alt;
+     int pixelDistance;
+
+     *first_scan = (int) (drawarea->base_y * data_reducer +
+                    anchor_y / drawarea->magnify);
+
+     *file_entry = *first_scan + drawarea->top_ping;
+
+     *last_scan = *current_scan = *first_scan;
+
+     pixelDistance = abs((int)anchor_x - dist_to_nadir);
+
+     alt = (float)pixelDistance / zoom_alt_to_pixel;
+
+     return(alt);
+}
+
+
+static float calculate_alt(UNUSED Widget w, int *current_scan, 
+			   unsigned long lastx, unsigned long lasty, 
+			   int dist_to_nadir, float zoom_alt_to_pixel, struct draw *drawarea)
+/*Widget w;
+int *current_scan;
+unsigned long lastx, lasty;
+int dist_to_nadir;
+float zoom_alt_to_pixel;
+struct draw *drawarea;*/
+{
+
+     float alt;
+     int pixelDistance;
+
+     *current_scan = (int) (drawarea->base_y * data_reducer +
+                         lasty / drawarea->magnify);
+
+     pixelDistance = abs((int)lastx - dist_to_nadir);
+
+     alt = (float)pixelDistance / zoom_alt_to_pixel;
+
+/*
+     if(w == XtNameToWidget(drawarea->shell, "*ZoomCorrectPortButton"))
+          alt = ((int)lastx - dist_to_nadir) / zoom_alt_to_pixel;
+     else
+          alt = (dist_to_nadir - (int)lastx) / zoom_alt_to_pixel;
+*/
+
+     return(alt);
+}
+
+
            
-void correct_altitude(Widget w, XtPointer client_data, XtPointer call_data)
+void correct_altitude(Widget w, XtPointer client_data, UNUSED XtPointer call_data)
 /*Widget w;
 XtPointer client_data;
 XtPointer call_data; */
@@ -24,8 +84,8 @@ XtPointer call_data; */
 
      Widget zoomArea;
 
-     float calculate_first_alt();
-     float calculate_alt();
+     /*float calculate_first_alt();*/
+     /*float calculate_alt();*/
 
      int y, z;
      int status;
@@ -265,11 +325,15 @@ fprintf(stdout, "anchor x = %lu\n", anchor_x);
      return;
 }
     
-void process_buttonPress(w, drawarea, ev, anchor_x, anchor_y, lastx, lasty)
+void process_buttonPress(UNUSED Widget w, UNUSED struct draw *drawarea, XEvent *ev, 
+			 unsigned long *anchor_x, unsigned long *anchor_y, 
+			 unsigned long *lastx, unsigned long *lasty)
+/*
 Widget w;
 struct draw *drawarea;
 XEvent * ev;
 unsigned long *anchor_x, *anchor_y, *lastx, *lasty;
+*/
 {
 
   /*long pixel_value;*/
@@ -296,11 +360,12 @@ unsigned long *anchor_x, *anchor_y, *lastx, *lasty;
           }
 }
 
-void process_buttonMotion(w, drawarea, ev, lastx, lasty)
-Widget w;
+void process_buttonMotion(Widget w, struct draw *drawarea, XEvent *ev, 
+			  unsigned long *lastx, unsigned long *lasty)
+/*Widget w;
 struct draw *drawarea;
 XEvent *ev;
-unsigned long *lastx, *lasty;
+unsigned long *lastx, *lasty;*/
 {
 
      switch(ev->xmotion.state)
@@ -381,61 +446,7 @@ int *test;
 
 }
 
-float calculate_first_alt(w, file_entry, first_scan, current_scan, last_scan, anchor_x, anchor_y, dist_to_nadir, zoom_alt_to_pixel, drawarea)
-Widget w;
-int *file_entry, *first_scan, *current_scan, *last_scan;
-unsigned long anchor_x, anchor_y;
-int dist_to_nadir;
-float zoom_alt_to_pixel;
-struct draw *drawarea;
-{
 
-     float alt;
-     int pixelDistance;
-
-
-     *first_scan = (int) (drawarea->base_y * data_reducer +
-                    anchor_y / drawarea->magnify);
-
-     *file_entry = *first_scan + drawarea->top_ping;
-
-     *last_scan = *current_scan = *first_scan;
-
-     pixelDistance = abs((int)anchor_x - dist_to_nadir);
-
-     alt = (float)pixelDistance / zoom_alt_to_pixel;
-
-     return(alt);
-}
-
-float calculate_alt(w, current_scan, lastx, lasty, dist_to_nadir, zoom_alt_to_pixel, drawarea)
-Widget w;
-int *current_scan;
-unsigned long lastx, lasty;
-int dist_to_nadir;
-float zoom_alt_to_pixel;
-struct draw *drawarea;
-{
-
-     float alt;
-     int pixelDistance;
-
-     *current_scan = (int) (drawarea->base_y * data_reducer +
-                         lasty / drawarea->magnify);
-
-     pixelDistance = abs((int)lastx - dist_to_nadir);
-
-     alt = (float)pixelDistance / zoom_alt_to_pixel;
-
-/*
-     if(w == XtNameToWidget(drawarea->shell, "*ZoomCorrectPortButton"))
-          alt = ((int)lastx - dist_to_nadir) / zoom_alt_to_pixel;
-     else
-          alt = (dist_to_nadir - (int)lastx) / zoom_alt_to_pixel;
-*/
-
-     return(alt);
-}
 
 void interpolate_alts(current_scan, last_scan, alts, lasty)
 int current_scan, last_scan, lasty;

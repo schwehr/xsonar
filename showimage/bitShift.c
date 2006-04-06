@@ -4,7 +4,7 @@
 #include "sonar.h"
 #include "externals.h"
 
-void displayBitShifter(Widget w,XtPointer client_data,XtPointer callback_data)
+void displayBitShifter(Widget w,XtPointer client_data, UNUSED XtPointer callback_data)
 /*Widget                 w;
 XtPointer              client_data;
 XtPointer              callback_data; */

@@ -13,10 +13,12 @@ optimize:
 	cd showimage && make OPTIMIZE=1
 
 clean:
-	cd usgsmap && make clean
-	cd xsonar && make clean
+	-rm -f */*.o */*.a */{showimage,xsonar}
+# 	-cd usgsmap && make clean
+# 	-cd xsonar && make clean
+# 	-cd showimage && make clean
 
-VERSION:=0.6
+VERSION:=0.7
 TMPDIR:=xsonar-${VERSION}
 
 .PHONY: release
@@ -24,7 +26,7 @@ release: clean
 	rm -rf ${TMPDIR} ${TMPDIR}.tar.bz2
 	mkdir ${TMPDIR}
 	cp -rp Makefile README.txt showimage usgsmap xsonar ${TMPDIR}
-	tar cf ${TMPDIR}.tar ${TMPDIR}
+	tar --exclude=.svn -cf ${TMPDIR}.tar ${TMPDIR}
 	bzip2 -9 ${TMPDIR}.tar
 
 xsonar.info: xsonar.info.in ${TMPDIR}.tar.bz2

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <assert.h>
 
 #include <X11/Xutil.h>
@@ -8,7 +9,8 @@
 #include "sonar.h"
 #include "externals.h"
 
-void updateProgressWin(Widget win, GC gc, const Dimension width, const Dimension height, const int scans, const int counter)
+static void 
+updateProgressWin(Widget win, GC gc, const Dimension width, const Dimension height, const int scans, const int counter)
 /*Widget win;
 GC gc;
 Dimension width, height;
@@ -38,33 +40,31 @@ XtPointer     call_data;*/
 
     struct draw *drawarea = (struct draw * ) client_data;
 
-    /*Widget message;*/
     Widget progressWindow;
-
     GC progressGC;
 
+    /*Widget message;*/
     /*Arg args[40];*/
-
     /*XEvent event;*/
     /*XWindowAttributes attributes;*/
- 
-    int i, j, k, z;
     /*int i, j, k, l, n, y, z;*/
     /*int numlines;*/
-    int number_of_scans;
     /*int scansizeInBytes;*/
     /*int data_offset;*/
     /*int qmipsReadOffset;*/
-    int display_offset;
     /*int width, height;*/
     /*int pix;*/
-    int displayDataPad;
     /*int pix_location;*/
     /*int bufferBytes;*/
     /*int fileSize;*/
     /*int fileStatus;*/
-    int currentInbytes;
     /*int bytesToRead;*/
+
+    int i, j, k, z;
+    int number_of_scans;
+    int display_offset;
+    int displayDataPad;
+    int currentInbytes;
     int bytesPerPixel;
 
     int displayDepth;
@@ -86,13 +86,10 @@ XtPointer     call_data;*/
     /*Dimension drawAmount;*/
 
 #if 0
-    void showProgress();
-    void message_display();
     void updateProgressWin();
     void checkForNans();
     void showAltitude();
     void showBeamCorrectionLimits();
-    void perror();
 #endif
 
     char messageBuffer[40];
