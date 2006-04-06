@@ -4,10 +4,10 @@
 #include "sonar.h"
 #include "externals.h"
 
-void displayBitShifter(w,client_data,callback_data)
-Widget                 w;
+void displayBitShifter(Widget w,XtPointer client_data,XtPointer callback_data)
+/*Widget                 w;
 XtPointer              client_data;
-XtPointer              callback_data; 
+XtPointer              callback_data; */
 {
     struct draw *drawarea = (struct draw *) client_data;
 

@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <assert.h>
 
 #include "showimage2.h"
 #include "sonar.h"
@@ -7,11 +8,9 @@
 #define EIGHT_BITS       8
 #define FILEHEADERSIZE   1024
 
-int getHeaderInfo(drawarea)
-struct draw *drawarea;
+int getHeaderInfo(struct draw *drawarea)
+/*struct draw *drawarea;*/
 {
-
-
     void get_swath();
     int get_scansize();
 
@@ -32,6 +31,7 @@ struct draw *drawarea;
 
     ImageHeader rasterHeader;
 
+    assert(drawarea);
 
     if(drawarea->fileType == USGS)
         {

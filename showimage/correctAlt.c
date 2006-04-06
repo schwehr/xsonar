@@ -7,10 +7,10 @@
 #define FALSE 0
 
            
-void correct_altitude(w, client_data, call_data)
-Widget w;
+void correct_altitude(Widget w, XtPointer client_data, XtPointer call_data)
+/*Widget w;
 XtPointer client_data;
-XtPointer call_data; 
+XtPointer call_data; */
 {
 
 

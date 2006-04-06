@@ -13,8 +13,11 @@ LIBFLAGS := -L/usr/X11R6/lib -lXp -lXext -lXmu -lXm -lXt -lX11
 LIBFLAGS += -L/sw/lib -L../usgsmap
 MAPLIB= -lmap
 MATHLIB= -lm
-OPTFLAGS= -I/usr/X11R6/include -Wall 
-CFLAGS := -c -g $(OPTFLAGS) -I/sw/include ${BYTEORDER}
+OPTFLAGS= -I/usr/X11R6/include
+CFLAGS := -c -g 
+CFLAGS += -Wall -Wimplicit -pedantic -W 
+#-Wredundant-decls
+CFLAGS += $(OPTFLAGS) -I/sw/include ${BYTEORDER}
 #HEADERS=        showimage2.h sonar.h
 
 # SRCS= 	main.c display.c telemetry.c messages.c featureRemove.c \

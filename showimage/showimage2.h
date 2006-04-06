@@ -11,6 +11,9 @@
  *
  */
 
+#ifndef __SHOWIMAGE2_H__
+#define __SHOWIMAGE2_H__
+
 #define TOP_DIR     "*"
 
 #define USGS          2
@@ -151,3 +154,11 @@ typedef struct {
     double centralLon;
 } ImageHeader;
 
+void message_display(struct draw *drawarea, int file_status);
+int getHeaderInfo(struct draw *drawarea);
+void showProgress(struct draw *drawarea, Widget w, char *messageBuffer);
+
+
+
+
+#endif /* __SHOWIMAGE2_H__ */

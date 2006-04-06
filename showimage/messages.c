@@ -2,14 +2,17 @@
  *    Message display function.  Will display messages
  *    in a pop up shell based on what is passed to it.
  */
+#include <assert.h>
 
 #include "showimage2.h"
 #include "externals.h"
 
-void message_display(drawarea, file_status)
-struct draw *drawarea;
+void message_display(struct draw *drawarea, int file_status)
+/*struct draw *drawarea;
 int file_status;
+*/
 {
+  assert(drawarea);
     Arg args[40];
 
     int n;

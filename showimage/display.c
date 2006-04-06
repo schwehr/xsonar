@@ -1,14 +1,38 @@
+#include <stdlib.h>
 #include <unistd.h>
+#include <assert.h>
+
 #include <X11/Xutil.h>
 
 #include "showimage2.h"
 #include "sonar.h"
 #include "externals.h"
 
-void show_image(w, client_data, call_data)
-Widget         w;
+void updateProgressWin(Widget win, GC gc, const Dimension width, const Dimension height, const int scans, const int counter)
+/*Widget win;
+GC gc;
+Dimension width, height;
+int scans, counter;*/
+{
+    float percentDone;
+    Dimension drawAmount;
+
+    percentDone = (float)counter / (float)scans;
+    drawAmount = (Dimension) (percentDone * (float)width);
+
+    XDrawLine(XtDisplay(win), XtWindow(win), gc, drawAmount, 
+                                                0, drawAmount, height);
+
+    XmUpdateDisplay(win);
+
+    return;
+}
+
+
+void show_image(Widget w, XtPointer client_data, XtPointer call_data)
+/*Widget         w;
 XtPointer     client_data;
-XtPointer     call_data;
+XtPointer     call_data;*/
 {
 
 
@@ -61,6 +85,7 @@ XtPointer     call_data;
     Dimension progressWindowHeight;
     /*Dimension drawAmount;*/
 
+#if 0
     void showProgress();
     void message_display();
     void updateProgressWin();
@@ -68,13 +93,15 @@ XtPointer     call_data;
     void showAltitude();
     void showBeamCorrectionLimits();
     void perror();
+#endif
 
     char messageBuffer[40];
 
     /*unsigned char *headerPtr;*/
-
+#if 0
     int getHeaderInfo();
     unsigned short get_short();
+#endif
 
     if(fp1 == -1 || fp1 == EOF)
         {
@@ -273,23 +300,34 @@ fprintf(stdout, "scan # %d, value = %d, char value = %d\n", i, shortValue, conve
      *   XPutPixel to populate the XImage in the case of TrueColor.
      */
 
+
+    /*printf ("Display Depth = %d\n",displayDepth);*/
+    /* switch better? */
+#if 1
     if(displayDepth == 8)
         image = XCreateImage(XtDisplay(drawarea->shell),
             DefaultVisualOfScreen(XtScreen(drawarea->graphics)), 
             displayDepth, ZPixmap, 0, (char *) display_data, 512, 512, 
             8, 512);
 
-    if(displayDepth == 24 || displayDepth == 16)
+    else if(displayDepth == 24 || displayDepth == 16 || displayDepth == 15)
         image = XCreateImage(XtDisplay(drawarea->shell),
             DefaultVisualOfScreen(XtScreen(drawarea->graphics)), 
             displayDepth, ZPixmap, 0, (char *) display_data, 512, 512, 
             32, 2048);
+    else {
+      fprintf (stderr,"ERROR: display depth of %d not supported",displayDepth);
+      exit(EXIT_FAILURE);
+    }
+#endif
 
-/*
-fprintf(stdout, "Number of scans to read = %d\n", number_of_scans);
-fprintf(stdout, "data reducer is %d\n", data_reducer);
-fprintf(stdout, "data pad is %d\n", displayDataPad);
-*/
+    assert(NULL != image);
+
+#if 0
+    fprintf(stdout, "Number of scans to read = %d\n", number_of_scans);
+    fprintf(stdout, "data reducer is %d\n", data_reducer);
+    fprintf(stdout, "data pad is %d\n", displayDataPad);
+#endif
 
     for(i = 0, z = 0; i < number_of_scans; i++)
         {
@@ -330,6 +368,7 @@ fprintf(stdout, "data pad is %d\n", displayDataPad);
                         if(drawarea->visual->class == TrueColor)
                              {
                              colorIndex = (sonar_data[k] * 49) / 255;
+			     assert(image);
                              XPutPixel(image, j, 
                                     z, drawarea->grayPixels[colorIndex]);
                              }
@@ -475,26 +514,5 @@ printf("offset = %d, real sixteen bit value = %d\n", j + display_offset, sixteen
     return;
 }
 
-void updateProgressWin(win, gc, width, height, scans, counter)
-Widget win;
-GC gc;
-Dimension width, height;
-int scans, counter;
-{
-
-    float percentDone;
-    Dimension drawAmount;
-
-    percentDone = (float)counter / (float)scans;
-    drawAmount = (Dimension) (percentDone * (float)width);
-
-    XDrawLine(XtDisplay(win), XtWindow(win), gc, drawAmount, 
-                                                0, drawAmount, height);
-
-    XmUpdateDisplay(win);
-
-    return;
-
-}
 
 

@@ -3,14 +3,15 @@
  *    to inform the user that something is happening while the application
  *    is busy.
  */
+#include <assert.h>
 
 #include "showimage2.h"
 #include "externals.h"
 
-void showProgress(drawarea, w, messageBuffer)
-struct draw *drawarea;
+void showProgress(struct draw *drawarea, Widget w, char *messageBuffer)
+/*struct draw *drawarea;
 Widget w;
-char *messageBuffer;
+char *messageBuffer;*/
 {
 
     Widget statusDialog;
@@ -29,8 +30,8 @@ char *messageBuffer;
     Boolean checkingEvents;
 
     /*XColor grayScale[256];*/
-
     /*Colormap defaultColormap;*/
+    /*int i;*/
 
     XSetWindowAttributes main_window_attr;  /* window attribute struct */
     unsigned long main_window_valuemask;    /* mask for attribute values */
@@ -40,7 +41,9 @@ char *messageBuffer;
     Arg args[40];
     Cardinal n;
 
-    /*int i;*/
+    assert(NULL != messageBuffer);
+    assert(NULL != drawarea);
+    assert(NULL != w);
 
     XmUpdateDisplay(drawarea->shell);
 
