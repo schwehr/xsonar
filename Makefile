@@ -1,3 +1,6 @@
+VERSION:=0.7
+TMPDIR:=xsonar-${VERSION}
+
 all:
 	cd usgsmap && make
 	cd xsonar && make byteOrder
@@ -12,14 +15,15 @@ optimize:
 	cd xsonar && make xsonar OPTIMIZE=1
 	cd showimage && make OPTIMIZE=1
 
+.PHONY: clean
 clean:
-	-rm -f */*.o */*.a */{showimage,xsonar}
+	-rm -rf ${TMPDIR}
+	-rm -f */*.o */*.a */{showimage,xsonar,byteOrder}
+	-rm -f */.gdb_history
 # 	-cd usgsmap && make clean
 # 	-cd xsonar && make clean
 # 	-cd showimage && make clean
 
-VERSION:=0.7
-TMPDIR:=xsonar-${VERSION}
 
 .PHONY: release
 release: clean
