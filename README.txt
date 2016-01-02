@@ -1,3 +1,10 @@
+Changes by Kurt Schwehr from to 2012 on are Copyright 2004 Google Inc.  License: Apache 2.0
+
+Changes by Kurt Schwehr prior to 2012 are Copyright 2004 by Kurt Schwehr.  License: Apache 2.0
+
+Code in the initial version are by US Govt employees and are public domain.
+
+
 07-July-2004:
 
 Builds on IRIX and Mandrake 8.1 x86 in addition to Darwin
